@@ -37,10 +37,12 @@ class NightlyScrap implements ShouldQueue
         @$dom->loadHTML($content);
         $tableRows = $dom->getElementsByTagName('tr');
         foreach ($tableRows as $row) {
+            $product = trim($row->getElementsByTagName('th')->item(0)->textContent);
             $price = $row->getElementsByTagName('td')->item(1)->textContent ?? '';
             $price = (int) preg_replace('/[^0-9]/', '', $price);
             $rowData = [
-                'product' => trim($row->getElementsByTagName('th')->item(0)->textContent),
+                'product' => $product,
+                'type'  => strpos($product, 'Gold') !== false ? 'gold' : 'silver',
                 'description' => trim($row->getElementsByTagName('td')->item(0)->textContent  ?? '').' BDT/Gram',
                 'price' => $price,
             ];

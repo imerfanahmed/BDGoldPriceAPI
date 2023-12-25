@@ -21,6 +21,5 @@ Route::get('/', function () {
 });
 
 Route::get('scrap',function(){
-
-    return response()->json($tableData);
+    return "Scraping...";
 });

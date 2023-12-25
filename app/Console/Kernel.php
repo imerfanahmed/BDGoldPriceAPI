@@ -13,8 +13,7 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule): void
     {
-        // $schedule->command('inspire')->hourly();
-        $schedule->job(new NightlyScrap)->everyMinute();
+        $schedule->job(new NightlyScrap)->dailyAt('23:00');
     }
 
     /**
