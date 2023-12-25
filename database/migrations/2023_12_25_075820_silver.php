@@ -11,12 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('products', function (Blueprint $table) {
+        Schema::create('silvers', function (Blueprint $table) {
             $table->id();
-            $table->string('product')->nullable();
-            $table->string('type')->enums(['gold', 'silver'])->nullable();
-            $table->string('description')->nullable();
-            $table->integer('price')->nullable();
+            $table->string('18k')->nullable();
+            $table->string('21k')->nullable();
+            $table->string('22k')->nullable();
+            $table->string('traditional')->nullable();
             $table->timestamps();
         });
     }

@@ -26,11 +26,9 @@ Route::get('v1', function () {
     ], 200);
 });
 
-Route::get('/v1/today', [GoldAPIController::class, 'today']);
-Route::get('/v1/yesterday', [GoldAPIController::class, 'yesterday']);
-Route::get('/v1/lastweek', [GoldAPIController::class, 'lastWeek']);
-Route::get('/v1/lastmonth', [GoldAPIController::class, 'lastmonth']);
-Route::get('/v1/lastyear', [GoldAPIController::class, 'lastyear']);
-Route::get('/v1/last5years', [GoldAPIController::class, 'last5years']);
-Route::get('/v1/all', [GoldAPIController::class, 'all']);
+Route::prefix('v1/gold')->group(function () {
+    Route::get('today', [GoldAPIController::class, 'today']);
+    Route::get('yesterday', [GoldAPIController::class, 'yesterday']);
+    Route::get('lastweek', [GoldAPIController::class, 'lastWeek']);
+});
 
