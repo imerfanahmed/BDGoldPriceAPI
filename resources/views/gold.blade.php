@@ -46,7 +46,7 @@
                     </li>
 
                     <li>
-                        <a href="">api/v1/all(Since 2007)</a> <br>
+                        api/v1/all(Since 2007)<br>
                         <small>Need all the data from api, feel free to email me</small><a href="mailto:erfan.siam98@gmail.com">(erfan.siam98@gamil.com)</a>
                     </li>
                 </ul>
