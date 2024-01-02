@@ -89,7 +89,8 @@
                             },
                         parentHeightOffset: 0,
                         toolbar: {
-                            show: true,
+                            show: false,
+                            download: false
                         },
                         markers: {
                             size: 0,
