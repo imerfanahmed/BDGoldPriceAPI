@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <title>Title</title>
+        <title>BD GOLD Price Tracker and API</title>
         <!-- Required meta tags -->
         <meta charset="utf-8" />
         <meta
