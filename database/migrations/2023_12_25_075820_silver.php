@@ -13,9 +13,9 @@ return new class extends Migration
     {
         Schema::create('silvers', function (Blueprint $table) {
             $table->id();
-            $table->string('18k')->nullable();
-            $table->string('21k')->nullable();
-            $table->string('22k')->nullable();
+            $table->string('k18')->nullable();
+            $table->string('k21')->nullable();
+            $table->string('k22')->nullable();
             $table->string('traditional')->nullable();
             $table->timestamps();
         });

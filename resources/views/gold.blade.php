@@ -23,6 +23,13 @@
         <div class="text-center mt-5">
             <h1>Gold Price History in Bangladesh</h1>
             <div id="gold-chart"></div>
+        </div>
+        <div>
+            <p class="text-center">
+                * Prices are collected from Bangladesh Jewellers Association website <br>
+                * There is a 5% VAT on all gold purchases in Bangladesh <br>
+                * If purchased in jewelry form, there is additional making charges
+            </p>
 
         </div>
 
@@ -31,7 +38,7 @@
         <script>
             // @formatter:off
             document.addEventListener("DOMContentLoaded", function () {
-                window.ApexCharts && (new ApexCharts(document.getElementById('gold-chart'), {
+                var chart = window.ApexCharts && (new ApexCharts(document.getElementById('gold-chart'), {
                     chart: {
                         type: "area",
                         fontFamily: 'inherit',
@@ -43,6 +50,25 @@
                         parentHeightOffset: 0,
                         toolbar: {
                             show: true,
+                        },
+                        markers: {
+                            size: 0,
+                            strokeColors: '#fff',
+                            strokeWidth: 2,
+                            strokeOpacity: 0.9,
+                            strokeDashArray: 0,
+                            fillOpacity: 1,
+                            discrete: [],
+                            shape: "circle",
+                            radius: 2,
+                            offsetX: 0,
+                            offsetY: 0,
+                            onClick: undefined,
+                            onDblClick: undefined,
+                            hover: {
+                                size: undefined,
+                                sizeOffset: 3
+                            }
                         },
                         animations: {
                             enabled: false,
@@ -95,12 +121,6 @@
                         theme: 'dark'
                     },
                     grid: {
-                        // padding: {
-                        //     top: -20,
-                        //     right: 0,
-                        //     left: -4,
-                        //     bottom: -4
-                        // },
                         strokeDashArray: 10,
                     },
                     xaxis: {
@@ -130,14 +150,13 @@
                         },
                     },
                     labels: {!! json_encode($dates) !!},
-                      colors: ['#a78b27', '#e7bd51', '#b3933f', '#665424'],
+                      colors: ['#feda6e', '#e7bd51', '#b3933f', '#665424'],
                       legend: {
                           show: false,
                       },
 
             })).render();
             });
-            // @formatter:on
           </script>
 
 
