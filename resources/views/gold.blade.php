@@ -22,6 +22,7 @@
 
         <div class="text-center mt-5">
             <h1>Gold Price History in Bangladesh</h1>
+            <small>(This app runs a cron everyday and scrap data from bajus.org)</small>
             <div id="gold-chart"></div>
         </div>
         <div>
@@ -29,6 +30,45 @@
                 * Prices are collected from Bangladesh Jewellers Association website <br>
                 * There is a 5% VAT on all gold purchases in Bangladesh <br>
                 * If purchased in jewelry form, there is additional making charges
+            </p>
+
+            <p>
+                <h3>API Endpoints(GOLD)</h3>
+                <ul>
+                    <li>
+                        <a href="{{ route('gold.today') }}">/api/v1/gold/today</a>
+                    </li>
+                    <li>
+                        <a href="{{route('gold.yesterday')}}">/api/v1/gold/yesterday<a>
+                    </li>
+                    <li>
+                        <a href="{{ route('gold.lastweek') }}">/api/v1/gold/lastweek</a>
+                    </li>
+
+                    <li>
+                        <a href="">api/v1/all(Since 2007)</a> <br>
+                        <small>Need all the data from api, feel free to email me</small><a href="mailto:erfan.siam98@gmail.com">(erfan.siam98@gamil.com)</a>
+                    </li>
+                </ul>
+
+                <h3>API Endpoints(Silver)</h3>
+                <ul>
+                    <li>
+                        <a href="{{ route('gold.today') }}">/api/v1/gold/today</a>
+                    </li>
+                    <li>
+                        <a href="{{route('gold.yesterday')}}">/api/v1/gold/yesterday<a>
+                    </li>
+                    <li>
+                        <a href="{{ route('gold.lastweek') }}">/api/v1/gold/lastweek</a>
+                    </li>
+
+                    <li>
+                        <a href="">api/v1/all(Since 2007)</a> <br>
+                        <small>Need all the data from api, feel free to email me</small><a href="mailto:erfan.siam98@gmail.com">(erfan.siam98@gamil.com)</a>
+                    </li>
+                </ul>
+
             </p>
 
         </div>

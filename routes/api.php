@@ -27,8 +27,8 @@ Route::get('v1', function () {
 });
 
 Route::prefix('v1/gold')->group(function () {
-    Route::get('today', [GoldAPIController::class, 'today']);
-    Route::get('yesterday', [GoldAPIController::class, 'yesterday']);
-    Route::get('lastweek', [GoldAPIController::class, 'lastWeek']);
+    Route::get('today', [GoldAPIController::class, 'today'])->name('gold.today');
+    Route::get('yesterday', [GoldAPIController::class, 'yesterday'])->name('gold.yesterday');
+    Route::get('lastweek', [GoldAPIController::class, 'lastWeek'])->name('gold.lastweek');
 });
 

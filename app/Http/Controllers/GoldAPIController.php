@@ -22,7 +22,7 @@ class GoldAPIController extends Controller
 
     public function yesterday(){
         $date = Carbon::yesterday();
-        $gold = Gold::select('created_at as date')->whereDate('created_at as Date', $date)->get();
+        $gold = Gold::select('created_at as date')->whereDate('created_at', $date)->firstOrFail();
         return response()->json([
             'message' => 'Great success! API v1',
             'status' => 'Connected',
